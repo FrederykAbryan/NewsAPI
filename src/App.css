@@ -1,0 +1,16 @@
+#root {
+  /* max-width: 100vw; */
+  min-height: 100vh;
+  min-width: 100%;
+  margin: 0 auto;
+}
+
+.ant-carousel .slick-dots li button {
+  background: #ff4ef6;
+  opacity: 0.4;
+}
+
+.ant-carousel .slick-dots li.slick-active button {
+  opacity: 1;
+  background: #ff4ef6;
+}
