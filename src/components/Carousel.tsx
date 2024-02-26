@@ -16,7 +16,6 @@ type Props = {
 }
 
 const CarouselComponent = ({dt}: Props) => {
-  console.log(dt)
   return (
     <Carousel autoplay dotPosition='bottom'>
       {dt.map((v: dtArticle, i: number) => {

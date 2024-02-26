@@ -15,9 +15,8 @@ const Sport = () => {
         <>
             <Divider>Sport News</Divider>
             <Flex wrap="wrap" justify={"space-between"} align={"flex-start"} gap={'middle'}>
-                {sportDt.data?.articles.map((v: dtArticle) => {
-                    console.log(v);
-                    return <NewsCard dt={v} />
+                {sportDt.data?.articles.map((v: dtArticle, i: number) => {
+                    return <NewsCard key={i} dt={v} />
                 })}
             </Flex>
         </>

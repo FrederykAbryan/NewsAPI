@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Layout, Menu, theme } from 'antd';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import '../index.css'
 
 const { Header, Content, Footer } = Layout;
@@ -25,7 +25,10 @@ type Click = {
 }
 const Dashboard: React.FC = () => {
     const navigate = useNavigate()
+    const location = useLocation()
+    const pathRef = useRef([location.pathname])
     const handleClick = (e : Click) => {
+        pathRef.current = [e.key]
         navigate(e.key)
     }
     const {
@@ -48,16 +51,16 @@ const Dashboard: React.FC = () => {
                 <Menu
                     theme="dark"
                     mode="horizontal"
-                    defaultSelectedKeys={['/']}
+                    defaultSelectedKeys={pathRef.current}
                     items={items}
                     style={{ flex: 1, minWidth: 0}}
                     onClick={handleClick}
                 />
             </Header>
-            <Content style={{ padding: '0 15%' }}>
+            <Content style={{ padding: '0 5%' }}>
                 <div
                     style={{
-                        padding: 20,
+                        padding: 10,
                         minHeight: "100vh",
                         background: colorBgContainer,
                         borderRadius: borderRadiusLG,

@@ -14,7 +14,6 @@ const divsStyle: React.CSSProperties = {
 const Tech = () => {
     const techDt = showTech()
 
-    console.log(techDt)
     if (techDt.isPending) {
         return (
             <Skeleton active />
@@ -25,9 +24,8 @@ const Tech = () => {
             <Divider>Tech News</Divider>
             <CarouselComponent dt={techDt.data?.articles.slice(0, 5)} />
             <div style={divsStyle}>
-                {techDt.data?.articles.slice(5).map((v: dtArticle) => {
-                    console.log(v)
-                    return <NewsCard dt={v} />
+                {techDt.data?.articles.slice(5).map((v: dtArticle, i: number) => {
+                    return <NewsCard dt={v}  key={i}/>
                 })}
             </div>
         </>
