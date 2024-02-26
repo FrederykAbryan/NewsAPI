@@ -1,4 +1,13 @@
-# React + TypeScript + Vite
+# Installation
+
+run "npm install" to install all the needed dependency
+
+run "npm run dev" to run the web
+
+don't forget to make your local .env file and store your API key inside
+
+
+# React + TypeScript + Vite + Tanstack Query
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
