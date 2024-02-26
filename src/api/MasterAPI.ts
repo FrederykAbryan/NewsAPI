@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // const accessToken = import.meta.env.VITE_ACCESS_TOKEN_AUTH
-const API_KEY = import.meta.env.VITE_NEWAPI_KEY
+const API_KEY = import.meta.env.VITE_API_KEY
 const axiosInstance = axios.create({
   baseURL: import.meta.env.VITE_BASE_URL,
   headers: {

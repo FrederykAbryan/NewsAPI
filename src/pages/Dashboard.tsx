@@ -57,7 +57,7 @@ const Dashboard: React.FC = () => {
                     onClick={handleClick}
                 />
             </Header>
-            <Content style={{ padding: '0 5%' }}>
+            <Content style={{ padding: '0 15%' }}>
                 <div
                     style={{
                         padding: 10,
