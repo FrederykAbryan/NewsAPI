@@ -16,7 +16,9 @@ const Home = () => {
             <Divider>Top Headlines</Divider>
             <Flex wrap="wrap" justify={"space-between"} align={"flex-start"} gap={'middle'}>
                 {headlineDt.data?.articles.map((v: dtArticle, i: number) => {
-                    return <NewsCard key={i} dt={v} />
+                    return <div key={i}>
+                        <NewsCard dt={v} />
+                    </div>
                 })}
             </Flex>
         </>

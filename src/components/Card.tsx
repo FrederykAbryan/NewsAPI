@@ -3,10 +3,10 @@ import { Button, Card, Flex, Typography, Image } from 'antd';
 import { articleType } from '../constant/DataType';
 
 const cardStyle: React.CSSProperties = {
-    width: 620,
+    width: "33vw",
     height: "100%",
 }
-;
+    ;
 const carouselStyle: React.CSSProperties = {
     width: "100%",
     height: "100%",
@@ -14,10 +14,10 @@ const carouselStyle: React.CSSProperties = {
 
 const imgStyle: React.CSSProperties = {
     display: 'block',
-    width: 273,
+    width: "15vw",
 };
 
-const NewsCard = ({ dt,type }: articleType) => {
+const NewsCard = ({ dt, type }: articleType) => {
     return (
         <Card hoverable style={type === 'carousel' ? carouselStyle : cardStyle} styles={{ body: { padding: 0, overflow: 'hidden' } }}>
             <Flex justify="space-between">
