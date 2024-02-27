@@ -21,7 +21,7 @@ const CarouselComponent = ({dt}: Props) => {
       {dt.map((v: dtArticle, i: number) => {
         return (
           <div style={contentStyle} key={i}>
-          <NewsCard dt={v} type={'carousel'}/>
+          <NewsCard dt={v} />
           </div>
         )
       })}
