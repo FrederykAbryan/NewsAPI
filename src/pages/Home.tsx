@@ -1,4 +1,4 @@
-import { Divider, Flex, Skeleton } from "antd"
+import { Col, Divider, Row, Skeleton } from "antd"
 import { showTopHeadline } from "../api/Queries"
 import { dtArticle } from "../constant/DataType"
 import NewsCard from "../components/Card"
@@ -14,13 +14,13 @@ const Home = () => {
     return (
         <>
             <Divider>Top Headlines</Divider>
-            <Flex wrap="wrap" justify={"space-between"} align={"flex-start"} gap={'middle'}>
+            <Row gutter={[24, 24]}>
                 {headlineDt.data?.articles.map((v: dtArticle, i: number) => {
-                    return <div key={i}>
+                    return <Col key={i} xs={24} sm={8} md={8} lg={12} xl={12} xxl={8}>
                         <NewsCard dt={v} />
-                    </div>
+                        </Col>
                 })}
-            </Flex>
+            </Row>
         </>
     )
 }

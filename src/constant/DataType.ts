@@ -1,6 +1,5 @@
 export type articleType = {
     dt : dtArticle
-    type? : string
 }
 export type dtArticle = {
         source: Source;

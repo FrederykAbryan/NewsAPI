@@ -1,4 +1,4 @@
-import { Divider, Flex, Skeleton } from "antd"
+import { Col, Divider, Row, Skeleton } from "antd"
 import { dtArticle } from "../constant/DataType"
 import { showSport } from "../api/Queries"
 import NewsCard from "../components/Card"
@@ -14,11 +14,13 @@ const Sport = () => {
     return (
         <>
             <Divider>Sport News</Divider>
-            <Flex wrap="wrap" justify={"space-between"} align={"flex-start"} gap={'middle'}>
+            <Row gutter={[24, 24]}>
                 {sportDt.data?.articles.map((v: dtArticle, i: number) => {
-                    return <NewsCard key={i} dt={v} />
+                    return <Col key={i} xs={24} sm={8} md={8} lg={12} xl={12} xxl={8}>
+                        <NewsCard dt={v} />
+                    </Col>
                 })}
-            </Flex>
+            </Row>
         </>
     )
 }
